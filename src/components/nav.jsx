@@ -8,6 +8,7 @@ import { logoutUser } from "./../slice/userSlice";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { clearCart } from "./../slice/cartSlice";
+import Header from "./Header";
 
 const Nav = () => {
   const user = useSelector((state) => state.userState?.user);
@@ -66,14 +67,7 @@ const Nav = () => {
                 </span>
               </div>
             </NavLink>
-            {user && (
-              <button
-                className="btn btn-error btn-outline btn-sm ml-7"
-                onClick={handlingLogout}
-              >
-                Logout
-              </button>
-            )}
+            <Header />
           </div>
         </div>
       </nav>

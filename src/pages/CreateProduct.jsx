@@ -5,6 +5,7 @@ import FormSelect from "./../components/Form/FormSelect";
 import customAPI from "./../api";
 import { toast } from "react-toastify";
 import { useNavigate, redirect } from "react-router-dom";
+import { Categories } from "./../utils/Categories";
 
 export const loader = (store) => async () => {
   const user = store.getState().userState?.user;
@@ -20,7 +21,9 @@ export const loader = (store) => async () => {
 };
 
 const CreateProduct = () => {
-  const categories = ["sepatu", "baju", "kemeja", "celana", "handphone"];
+  const categories = Categories;
+  console.log(categories);
+
   const [imageType, setImageType] = useState("file"); // State untuk memilih jenis input
   const navigate = useNavigate();
 

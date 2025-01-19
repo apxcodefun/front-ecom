@@ -6,6 +6,7 @@ import FormInput from "./../components/Form/FormInput";
 import FormSelect from "./../components/Form/FormSelect";
 import FormTextArea from "./../components/Form/FormTextArea";
 import { toast } from "react-toastify";
+import { Categories } from "./../utils/Categories";
 
 export const loader = (store) => async () => {
   const user = store.getState().userState?.user;
@@ -21,7 +22,9 @@ export const loader = (store) => async () => {
 };
 
 const EditProduct = () => {
-  const categories = ["sepatu", "baju", "kemeja", "celana", "handphone"];
+  const categories = Categories;
+  console.log(categories);
+
   const { id } = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);

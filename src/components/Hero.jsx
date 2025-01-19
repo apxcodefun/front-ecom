@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   const { products } = useLoaderData();
-
   return (
     <>
       <div className="grid lg:grid-cols-2 gap-24 items-center">
@@ -29,18 +28,21 @@ const Hero = () => {
         </div>
         {/* Slider */}
         <div className="hidden lg:carousel carousel-center bg-neutral rounded-box space-x-4 p-4 scroll-snap">
-          {products.map((item, index) => (
-            <div className="carousel-item scroll-snap-start" key={index}>
-              <img
-                src={`http://localhost:3011${item.image.replace(
-                  "/images",
-                  ""
-                )}`}
-                alt={item.name}
-                className="w-40 h-40 object-cover rounded-md"
-              />
-            </div>
-          ))}
+          {products.map((item, index) => {
+            const imageUrl = item.image.startsWith("http")
+              ? item.image
+              : `http://localhost:3011${item.image.replace("/images", "")}`;
+
+            return (
+              <div className="carousel-item scroll-snap-start" key={index}>
+                <img
+                  src={imageUrl}
+                  alt={item.name}
+                  className="w-40 h-40 object-cover rounded-md"
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </>

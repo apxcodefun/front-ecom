@@ -11,6 +11,8 @@ const CartProduct = ({ item, user }) => {
     ? item.image
     : `http://localhost:3011${item.image.replace("/images", "")}`;
   const { revalidate } = useRevalidator();
+  console.log(imageUrl);
+
   return (
     <>
       <div className="card bg-base-100 shadow-xl" key={item._id}>

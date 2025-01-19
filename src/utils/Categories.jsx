@@ -1,0 +1,15 @@
+export const Categories = [
+  "all",
+  "handphone",
+  "baju",
+  "kemeja",
+  "celana",
+  "sepatu",
+  "laptop",
+  "aksesori",
+  "tas",
+  "jaket",
+  "perhiasan",
+  "sepatu olahraga",
+  "kamera",
+];

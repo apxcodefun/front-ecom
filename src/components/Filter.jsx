@@ -3,11 +3,12 @@ import { Form, Link } from "react-router-dom";
 import FormInput from "./Form/FormInput";
 import FormSelect from "./Form/FormSelect";
 import { useLoaderData } from "react-router-dom";
+import { Categories } from "./../utils/Categories";
 
 const Filter = () => {
   const { params } = useLoaderData();
   const { name, category } = params;
-  const categories = ["sepatu", "baju", "kemeja", "celana"];
+  const categories = Categories;
 
   return (
     <Form
@@ -25,7 +26,7 @@ const Filter = () => {
         label="Select Category"
         name="category"
         list={categories}
-        defaultValue={category}
+        defaultValue={category || "All"} // Jika category tidak ada, default ke 'All'
       />
       <button className="btn btn-primary" type="submit">
         Search Product
