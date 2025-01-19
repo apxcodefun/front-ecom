@@ -1,3 +1,5 @@
 # FRONT END ECOMMERCE
 
-Masih butuh penyesuaian + fix image url
+IMAGE FIXED
+
+NEXT PLANED REDESIGN UI if IM NOT LAZY
