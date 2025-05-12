@@ -8,7 +8,7 @@ import { logoutUser } from "./../slice/userSlice";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { clearCart } from "./../slice/cartSlice";
-import Header from "./Header";
+import Header from "./header";
 
 const Nav = () => {
   const user = useSelector((state) => state.userState?.user);
