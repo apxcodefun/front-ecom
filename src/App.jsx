@@ -11,7 +11,7 @@ import RegisterView from "./pages/auth/registerView";
 import PublicLayout from "./layouts/publicLayout";
 import DetailProduct from "./pages/DetailProduct";
 import CheckoutView from "./pages/CheckoutView";
-import Error from "./pages/error";
+import Error from "./pages/Error";
 import CreateProduct from "./pages/CreateProduct";
 import EditProduct from "./pages/EditProduct";
 // Loader
