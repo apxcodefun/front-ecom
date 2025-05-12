@@ -17,7 +17,7 @@ import EditProduct from "./pages/EditProduct";
 // Loader
 import { loader as HomeLoader } from "./pages/homeView";
 import { loader as ProductLoader } from "./pages/productView";
-import { loader as CheckoutLoader } from "./pages/checkoutView";
+import { loader as CheckoutLoader } from "./pages/CheckoutView";
 import { loader as OrderLoader } from "./pages/orderView";
 import { loader as CreateProductLoader } from "./pages/CreateProduct";
 import { loader as EditProductLoader } from "./pages/EditProduct";
