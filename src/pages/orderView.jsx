@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 import { redirect, useLoaderData } from "react-router-dom";
-import priceFormat from "./../utils/price";
+import priceFormat from "./../utils/Price";
 import customAPI from "./../api";
 
 export const loader = (storage) => async () => {
